@@ -64,6 +64,5 @@ export default Logistic
     thought:'Have responsive support (chat, email, phone)',
     icon:'',
 
-
  },
 ];

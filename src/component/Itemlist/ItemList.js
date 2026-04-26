@@ -8,7 +8,6 @@ import tennis from "../../assets/tennis.png";
 import yellow from "../../assets/yellow.png";
 import football from "../../assets/football.png";
 
-
 const listItem =[{
 id:0,
 name:"Glovs",
