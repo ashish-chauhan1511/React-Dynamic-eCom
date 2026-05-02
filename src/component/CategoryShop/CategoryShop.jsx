@@ -1,10 +1,16 @@
-import React from "react"
-import listItem from "../Itemlist/ItemList"
-import Productcard from "../Procard/Procard"
-import Poster from "../Poster/Poster"
+import React from "react";
+// import listItem from "../Itemlist/ItemList"
+import { useProducts } from "../Gethook/Gethook";
+import Productcard from "../Procard/Procard";
+import Poster from "../Poster/Poster";
 
 
 const CategoryShop = ({ title, pimage, tabs = [] }) => {
+    const { products: listItem, loading, error } = useProducts();
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>{error}</p>;
+
     let filterItems = tabs.includes('All') ? listItem : listItem.filter(items => tabs.includes(items.tabs))
     const renderlist = filterItems.map(productitem => {
         return (

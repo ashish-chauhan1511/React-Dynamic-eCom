@@ -11,7 +11,6 @@ import Feedback from "../Feedback/Feedback";
 import Frontbaner from "../Frontbaner/Frontbaner";
 
 
-
 const Home = () => {
   const heroRef = useRef(null);
 

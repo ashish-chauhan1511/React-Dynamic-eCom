@@ -2,7 +2,8 @@ import React from "react";
 import Head from "../Heading/Heading";
 import { useState } from "react";
 import Productcard from "../Procard/Procard";
-import listItem from "../Itemlist/ItemList";
+// import listItem from "../Itemlist/ItemList";
+import { useProducts } from "../Gethook/Gethook";
 import { Link } from "react-router-dom";
 import everyProduct from "../Everyproduct/Everyproduct";
 import Button from "../Button/Button";
@@ -14,6 +15,10 @@ import Button from "../Button/Button";
 const Products = () => {
     const tabs = ["All", "Gym", "Shose", "Combo"];
     const [active, setActive] = useState("All");
+    const {products : listItem, loading: Loading, error} = useProducts();
+
+    if (Loading) return <p>Loading...</p>;
+    if (error) return <p>{error}</p>;
     let filterProducts = active === "All" ? listItem : listItem.filter(item => item.tabs === active);
 
     const renderProduct = filterProducts.slice(0, 8).map(items => {
