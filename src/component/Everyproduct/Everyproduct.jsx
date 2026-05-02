@@ -1,5 +1,4 @@
 import React from "react";
-// import listItem from "../Itemlist/ItemList";
 import { useProducts } from "../Gethook/Gethook";
 import Productcard from "../Procard/Procard";
 import Poster from "../Poster/Poster";
