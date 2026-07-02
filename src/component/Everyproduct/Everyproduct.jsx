@@ -2,7 +2,7 @@ import React from "react";
 import { useProducts } from "../Gethook/Gethook";
 import Productcard from "../Procard/Procard";
 import Poster from "../Poster/Poster";
-import Shosebanner from "../../assets/Shosebanner.jpg";
+import jutas from "../../assets/jutas.jpg"
 
 const everyProduct =()=> {
     const { products: listItem, loading, error } = useProducts();
@@ -16,7 +16,7 @@ const everyProduct =()=> {
     });
     return(
         <div className="everyproduct"> 
-          <Poster pimage={Shosebanner} />
+          <Poster pimage={jutas} />
         <div className='everyproduct_child'>{allproduct}</div>
         </div>
     );
