@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 const fetchProducts = async () => {
-  const res = await fetch(" https://ecom-backend-g35h.onrender.com");
+  const res = await fetch(" https://ecom-backend-g35h.onrender.com/api/products");
 
   if (!res.ok) {
     throw new Error("Failed to fetch products");
